@@ -1,11 +1,9 @@
 import { type NextPage } from "next";
-import { SignIn } from "@clerk/nextjs";
+import { SignIn, useUser } from "@clerk/nextjs";
+import { api } from "~/utils/api";
 import Head from "next/head";
 import { SignInButton, SignOutButton } from "@clerk/nextjs";
-
 import Link from "next/link";
-
-import { api } from "~/utils/api";
 
 const Home: NextPage = () => {
   const hello = api.example.hello.useQuery({ text: "from tRPC" });
